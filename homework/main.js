@@ -41,14 +41,13 @@
 
 */
 
-var div = document.createElement('div');
-div.className = "btn";
-div.innerText = "Look at this amazing color!";
-div.style.width = '150px';
-div.style.height = '150px';
-div.onclick = function () {
-  div.style.backgroundColor = 'rgb(' + getRandomIntInclusive(0, 255) + ', ' + getRandomIntInclusive(0, 255) + ', ' + getRandomIntInclusive(0, 255) + ')';
-  div.style.color = 'rgb(' + getRandomIntInclusive(0, 255) + ', ' + getRandomIntInclusive(0, 255) + ', ' + getRandomIntInclusive(0, 255) + ')';
+var button = document.createElement('button');
+button.className = "btn";
+button.innerText = "Look at this amazing color!";
+button.classList.add('btn');
+button.onclick = function () {
+  button.style.backgroundColor = 'rgb(' + getRandomIntInclusive(0, 255) + ', ' + getRandomIntInclusive(0, 255) + ', ' + getRandomIntInclusive(0, 255) + ')';
+  button.style.color = 'rgb(' + getRandomIntInclusive(0, 255) + ', ' + getRandomIntInclusive(0, 255) + ', ' + getRandomIntInclusive(0, 255) + ')';
 };
 
 function getRandomIntInclusive(min, max) {
@@ -57,4 +56,4 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-document.body.appendChild(div);
+document.body.appendChild(button);
