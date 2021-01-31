@@ -51,6 +51,7 @@ function changeColor() {
   button.style.color = 'rgb(' + getRandomIntInclusive(0, 255) + ', ' + getRandomIntInclusive(0, 255) + ', ' + getRandomIntInclusive(0, 255) + ')';
 };
 changeColor();
+button.onclick = changeColor;
 
 
 
