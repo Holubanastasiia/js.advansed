@@ -45,10 +45,14 @@ var button = document.createElement('button');
 button.className = "btn";
 button.innerText = "Look at this amazing color!";
 button.classList.add('btn');
-button.onclick = function () {
+
+function changeColor() {
   button.style.backgroundColor = 'rgb(' + getRandomIntInclusive(0, 255) + ', ' + getRandomIntInclusive(0, 255) + ', ' + getRandomIntInclusive(0, 255) + ')';
   button.style.color = 'rgb(' + getRandomIntInclusive(0, 255) + ', ' + getRandomIntInclusive(0, 255) + ', ' + getRandomIntInclusive(0, 255) + ')';
 };
+changeColor();
+
+
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
